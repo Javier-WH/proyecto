@@ -1,0 +1,210 @@
+ @font-face {
+     font-family: 'Exo';
+     src: url('/fonts/Exo2-Regular.ttf');
+ }
+ 
+ .invisible {
+     display: none;
+ }
+ 
+ #titulo {
+     font-size: 16px;
+     width: 100%;
+ }
+ 
+ #title-container {
+     margin-bottom: 20px;
+     width: 90%;
+     text-align: center;
+ }
+ 
+ body {
+     margin: 0;
+     padding: 0;
+     color: #fff;
+     font-family: Arial;
+     font-size: 12px;
+     overflow: hidden;
+ }
+ 
+ #img-container {
+     width: 93%;
+     display: flex;
+ }
+ 
+ #logo {
+     background-color: white;
+     border-radius: 50%;
+     height: 150px;
+     border: 1px solid var(--azulBatalla);
+     margin: auto;
+     margin-bottom: 20px;
+     margin-top: 20px;
+ }
+ 
+ .body {
+     position: absolute;
+     top: -20px;
+     left: -20px;
+     right: -40px;
+     bottom: -40px;
+     width: auto;
+     height: auto;
+     /* background: url("/IMG/JPG/roraima.jpg") no-repeat center center fixed; */
+     background: url("/IMG/JPG/loginBackground.jpg") no-repeat center center fixed;
+     background-size: cover;
+     -webkit-filter: blur(5px);
+     z-index: 0;
+     background-attachment: fixed;
+ }
+ 
+ #aux-lbl-phone,
+ #lbl-phone {
+     width: 50%;
+     float: left;
+ }
+ 
+ #aux-phone,
+ #phone {
+     width: 43.1%;
+ }
+ 
+ .datacontainer,
+ #formulario {
+     width: 100%;
+ }
+ 
+ .grad {
+     position: absolute;
+     top: -20px;
+     left: -20px;
+     right: -40px;
+     bottom: -40px;
+     width: auto;
+     height: auto;
+     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65)));
+     z-index: 1;
+     opacity: 0.7;
+ }
+ 
+ #form-container {
+     position: absolute;
+     /* top: calc(10% - 75px);
+     left: calc(45% - 50px); */
+     height: 500px;
+     width: 400px;
+     padding: 10px;
+     z-index: 2;
+     left: 0;
+     right: 0;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ 
+ label {
+     display: block;
+ }
+ 
+ .input-data {
+     width: 90%;
+     height: 30px;
+     background: transparent;
+     border: 1px solid rgba(255, 255, 255, 0.6);
+     border-radius: 2px;
+     color: #fff;
+     font-family: 'Exo', sans-serif;
+     font-size: 16px;
+     font-weight: 400;
+     padding: 4px;
+     margin-bottom: 10px;
+ }
+ 
+ button {
+     width: 185px;
+     height: 35px;
+     background: #fff;
+     border: 1px solid #fff;
+     cursor: pointer;
+     border-radius: 2px;
+     color: #a18d6c;
+     font-family: 'Exo', sans-serif;
+     font-size: 16px;
+     font-weight: 400;
+     padding: 6px;
+     margin-top: 10px;
+ }
+ 
+ .missing {
+     border: 1px solid red;
+ }
+ 
+ button:hover {
+     opacity: 0.8;
+ }
+ 
+ button:active {
+     opacity: 0.6;
+ }
+ 
+ .input-data:focus {
+     outline: none;
+     border: 1px solid rgba(255, 255, 255, 0.9);
+ }
+ 
+ button[type=button]:focus {
+     outline: none;
+ }
+ 
+ ::-webkit-input-placeholder {
+     color: rgba(255, 255, 255, 0.6);
+ }
+ 
+ ::-moz-input-placeholder {
+     color: rgba(255, 255, 255, 0.6);
+ }
+ 
+ @media only screen and (max-width: 550px) {
+     #logo {
+         background-color: white;
+         border-radius: 50%;
+         height: 100px;
+         border: 1px solid var(--azulBatalla);
+         margin: auto;
+         margin-bottom: 10px;
+         margin-top: 10px;
+     }
+     #form-container {
+         position: relative;
+         height: 100vh;
+         width: 100vw;
+         padding: 10px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+     .body {
+         width: 120vw;
+         height: 150vh;
+     }
+     .grad {
+         width: 120vw;
+         height: 150vh;
+     }
+     button {
+         width: 45%;
+         height: 30px;
+         background: #fff;
+         border: 1px solid #fff;
+         cursor: pointer;
+         border-radius: 2px;
+         color: #a18d6c;
+         font-family: 'Exo', sans-serif;
+         font-size: 16px;
+         font-weight: 400;
+         padding: 6px;
+         margin-top: 10px;
+     }
+     .input-data {
+         height: 20px;
+     }
+ }

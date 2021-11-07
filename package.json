@@ -1,0 +1,23 @@
+{
+    "name": "Proyecto",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "server": "nodemon src/server/app/server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "colors": "^1.4.0",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "express-mysql-session": "^2.1.7",
+        "express-session": "^1.17.2",
+        "mysql": "^2.18.1",
+        "sweetalert2": "^11.1.9"
+    }
+}

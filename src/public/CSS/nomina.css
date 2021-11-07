@@ -1,0 +1,29 @@
+ @font-face {
+     font-family: 'Exo';
+     src: url('/fonts/Exo2-Regular.ttf');
+ }
+ 
+ #nomina {
+     position: relative;
+ }
+ 
+ #nomina-logo {
+     width: 100px;
+     height: 100px;
+     background-color: white;
+     border: 1px solid blue;
+     border-radius: 50%;
+ }
+ 
+ #nomina-title {
+     position: absolute;
+     top: 40px;
+     left: 120px;
+     font-family: "Exo";
+ }
+ 
+ .nomina-teacher {
+     font-family: "Exo";
+     font-size: 16px;
+     border-bottom: 1px solid lightgray;
+ }

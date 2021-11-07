@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="shortcut icon" href="IMG/SVG/BatallaLogo.svg" type="image/x-icon">
+
+    <!-- Sweet Alert -->
+    <script src="JS/sweetalert2/dist/sweetalert2.all.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/registro.css">
+
+    <!-- javascript -->
+    <script src="JS/registro.js" defer></script>
+</head>
+
+<body>
+    <div class="body"></div>
+    <div class="grad"></div>
+
+
+    <div id="form-container">
+        <form action="/registro" method="POST" enctype="multipart/form-data" id="formulario">
+            <div id="img-container">
+                <img src="IMG/SVG/BatallaLogo.svg" alt="" id="logo">
+
+            </div>
+            <div id="title-container">
+                <span id="titulo">Registro de profesores</span>
+            </div>
+            <div class="datacontainer" id="personal-data">
+                <!-- <label for="names" class="lbl-data">Nombres</label> -->
+                <input type="text" id="names" class="input-data" name="names" autocomplete="off" placeholder="Nombres">
+                <!-- <label for="last-names" class="lbl-data">Apellidos</label> -->
+                <input type="text" id="last-names" class="input-data" name="lastName" autocomplete="off" placeholder="Apellidos">
+                <!-- <label for="id" class="lbl-data">Cedula</label> -->
+                <input type="number" id="id" class="input-data" name="id" max="5" placeholder="Cedula">
+            </div>
+            <div class="datacontainer" id="contact-data">
+                <!-- <label for="email" class="lbl-data">E-mail</label> -->
+                <input type="email" id="email" class="input-data" name="email" autocomplete="off" placeholder="E-mail">
+                <!-- <label for="phone" class="lbl-data" id="lbl-phone">Telefono</label> -->
+                <!-- <label for="aux-phone" class="lbl-data" id="aux-lbl-phone">Telefono alternativo</label> -->
+                <input type="number" id="phone" class="input-data" name="phone" autocomplete="off" placeholder="Telefono">
+                <input type="number" id="aux-phone" class="input-data" name="auxPhone" autocomplete="off" placeholder="Telefono alternativo">
+            </div>
+            <div class="datacontainer" id="login-data">
+                <!-- <label for="nick-name" class="lbl-data">Usuario</label> -->
+                <input type="text" id="nick-name" class="input-data" name="nickName" autocomplete="off" placeholder="Usuario">
+                <!-- <label for="password" class="lbl-data">Contraseña</label> -->
+                <input type="password" id="password" class="input-data" name="password" placeholder="Contraseña">
+                <!-- <label for="password2" class="lbl-data">Repite la contraseña</label> -->
+                <input type="password" id="password2" class="input-data" placeholder="Repite la contraseña">
+            </div>
+            <button id="btn-atras">Regresar</button>
+            <button id="btn-register">Registrar</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

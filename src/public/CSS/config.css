@@ -1,0 +1,79 @@
+ @font-face {
+     font-family: 'Exo';
+     src: url('/fonts/Exo2-Regular.ttf');
+ }
+ 
+ * {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ :root {
+     --title-bar-height: 90px;
+     --left-bar-width: 150px;
+     --colorA: rgb(91, 91, 235);
+     --colorB: rgb(205, 205, 221);
+     --boder-color: rgb(83, 80, 80);
+ }
+ 
+ body {
+     overflow: hidden;
+ }
+ /* title */
+ 
+ #logo {
+     width: 80px;
+     margin-left: 20px;
+     margin-right: 30px;
+     margin-top: 5px;
+     float: left;
+     background-color: white;
+     border-radius: 50%;
+ }
+ 
+ #title-bar {
+     background-color: var(--colorA);
+     height: var(--title-bar-height);
+     left: 0;
+     top: 0;
+     right: 0;
+     position: fixed;
+ }
+ 
+ #title {
+     color: white;
+     text-shadow: 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black;
+     font-size: 30px;
+ }
+ 
+ #title-container {
+     height: 90px;
+     width: 200px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ /* leftbar */
+ 
+ #left-bar {
+     background-color: var(--colorA);
+     width: var(--left-bar-width);
+     top: var(--title-bar-height);
+     left: 0;
+     bottom: 0;
+     position: fixed;
+     border-right: 2px solid var(--boder-color);
+ }
+ /* panel */
+ 
+ #options-container {
+     position: absolute;
+     top: var(--title-bar-height);
+     left: var(--left-bar-width);
+     right: 0;
+     bottom: 0;
+     background-color: var(--colorB);
+     border-top: 2px solid var(--boder-color);
+     border-left: 2px solid var(--boder-color);
+     overflow-y: auto;
+ }

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración</title>
+    <!-- Sweet Alert -->
+    <script src="JS/sweetalert2/dist/sweetalert2.all.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/config.css">
+    <link rel="stylesheet" href="CSS/config2.css">
+    <link rel="stylesheet" href="CSS/configList.css">
+    <link rel="stylesheet" href="CSS/checkBox.css">
+    <link rel="stylesheet" href="CSS/dropBox.css">
+
+
+
+    <!-- javascript -->
+    <script src="JS/config.js" type="module" defer></script>
+</head>
+
+<body>
+
+
+    <div id="title-bar">
+        <div id="logo-contaainer">
+            <img src="IMG/SVG/BatallaLogo.svg" alt="" id="logo">
+        </div>
+        <div id="title-container">
+            <span id="title">Configuración</span>
+        </div>
+    </div>
+
+    <div id="options-container">
+        <div class="option-container">
+            <span class="option-group-title">Carga de Notas</span>
+            <div class="option-subcontainer checkList" id="switch-container-CargaNotas">
+                <span class="option-title">Habilitar carga de notas 1er lapso</span>
+                <div class="switch">
+                    <input id="switch-1lapso" type="checkbox" class="switch-input" />
+                    <label for="switch-1lapso" class="switch-label" id="lapso1">Switch</label>
+                </div>
+                <span class="option-title">Habilitar carga de notas 2do lapso</span>
+                <div class="switch">
+                    <input id="switch-2lapso" type="checkbox" class="switch-input" />
+                    <label for="switch-2lapso" class="switch-label" id="lapso2">Switch</label>
+                </div>
+                <span class="option-title">Habilitar carga de notas 3er lapso</span>
+                <div class="switch">
+                    <input id="switch-3lapso" type="checkbox" class="switch-input" />
+                    <label for="switch-3lapso" class="switch-label" id="lapso3">Switch</label>
+                </div>
+                <span class="option-title">Permitir edicion de notas</span>
+                <div class="switch">
+                    <input id="switch-edit-grade" type="checkbox" class="switch-input" />
+                    <label for="switch-edit-grade" class="switch-label" id="allow_edit">Switch</label>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="option-container">
+            <span class="option-group-title">Profesores</span>
+            <div class="option-subcontainer ">
+                <span class="option-title opt" id="show-teacher-list">Ver lista de profesores</span>
+                <div id="teacherList" class="list invisible"></div>
+                <span class="option-title opt" id="show-register-teacher">Inscribir profesor</span>
+                <div id="register-teacher" class="list invisible">
+                    <label for="register-teacher-cedula">Cedula</label>
+                    <input type="text" id="register-teacher-cedula" autocomplete="off">
+                    <div id="select-container">
+                        <div class="select" id="select-anno">
+                            <select name="format" id="anno">
+                                <option selected disabled value="off">Año</option>
+                                <option value="1">1er año</option>
+                                <option value="2">2do año</option>
+                                <option value="3">3er año</option>
+                                <option value="4">4to año</option>
+                                <option value="5">5to año</option>
+                            </select>
+                        </div>
+                        <div class="select" id="select-seccion">
+                            <select name="format" id="seccion">
+                                <option selected disabled value="off">Sección</option>
+                                <option value="A">Sección A</option>
+                                <option value="B">Sección B</option>
+                                <option value="C">Sección C</option>
+                            </select>
+                        </div>
+
+                        <div class="select" id="select-materia">
+                            <select name="format" id="materia">
+                                <option selected disabled value="off">Seleccione la materia</option>
+                                <option value="Matematica">Matematica</option>
+                                <option value="Fisica">Fisica</option>
+                                <option value="Quimica">Quimica</option>
+                                <option value="Ingles">Ingles</option>
+                                <option value="Castellano">Castellano</option>
+                                <option value="Informatica">Informatica</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button id="btn-add-materia" class="btn-register-teacher">Agragar</button>
+                    <br>
+                    <button id="btn-register-teahcer" class="btn-register-teacher">Inscribir Profesor</button>
+
+                    <div id="matrias-added">
+                        <span id="added-title">Materias agregadas</span>
+                        <div id="materias-added-list">
+
+                        </div>
+
+                    </div>
+                </div>
+                <span class="option-title opt" id="show-remove-teacher">Despedir profesor</span>
+                <span class="option-title opt" id="show-print-teacherList">Imprimir nomina profesores</span>
+
+
+            </div>
+        </div>
+        <br>
+        <div class="option-container">
+            <span class="option-group-title">Alumnos</span>
+            <div class="option-subcontainer ">
+                <span class="option-title opt">Ver lista de alumnos</span>
+                <span class="option-title opt">Inscribir alumno</span>
+                <span class="option-title opt">Retirar alumnos</span>
+                <span class="option-title opt">Mejores promedios</span>
+                <span class="option-title opt">Imprimir nomina alumno</span>
+                <span class="option-title opt">Imprimir constancia de inscripcion</span>
+                <span class="option-title opt">Imprimir boletin de calificaciones</span>
+
+            </div>
+        </div>
+        <br>
+        <div class="option-container">
+            <span class="option-group-title">Opciones del Sistema</span>
+            <div class="option-subcontainer ">
+                <span class="option-title opt">Manejar base de datos</span>
+                <span class="option-title opt">Cambiar contraseña del administrador</span>
+            </div>
+        </div>
+
+        <div id="nomina" class="invisible">
+            <link rel="stylesheet" href="CSS/nomina.css">
+
+            <img src="IMG/SVG/batallaLogo.svg" alt="" id="nomina-logo">
+            <h2 id="nomina-title">Nomina de profesores</h2>
+            <div id="teahcer-list-nomina">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="left-bar">
+        <br><br>
+        <span class="menu-option-leftbar">Cambiar Usuario</span>
+        <span class="menu-option-leftbar">Cambiar Contraseña</span>
+        <span class="menu-option-leftbar">Ayuda</span>
+        <span class="menu-option-leftbar" id="left-information">Información</span>
+        <span class="menu-option-leftbar" id="logout">Logout</span>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
