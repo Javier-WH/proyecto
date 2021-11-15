@@ -224,6 +224,75 @@ function updateCargaNotas(subject, value, callBack) {
 }
 
 
+
+
+
+
+//preinscribe al estudiante
+async function registerStudent({ studenName, studentLastName, tutorName, tutorLastName, idStuden, idTutor, password, email, phone, auxPhone, photo, anno, gender }, callback) {
+    password = await bcryptjs.hash(password, 8);
+
+    connection.query("INSERT INTO preinscription SET ?", {
+        studentName: studenName,
+        studentLastName: studentLastName,
+        studentCedula: idStuden,
+        parentName: tutorName,
+        parentLastName: tutorLastName,
+        parentCedula: idTutor,
+        email: email,
+        phone: phone,
+        phone2: auxPhone,
+        password: password,
+        gender: gender,
+        year: anno,
+        photo: photo
+
+    }, (error, results, fields) => {
+
+        if (error) {
+
+            console.log("Error al registrar estudiante".bgRed);
+            // console.log(error.code)
+            if (error.code = "ER_DUP_ENTRY") {
+                callback("La cedúla del estudiante ya está registrada");
+            } else {
+                callback("ERROR");
+            }
+
+        } else {
+            console.log(`Se ha registrado correctamente el estudiante`.bgGreen);
+            callback("OK");
+        }
+    });
+};
+
+
+function validTutor({ idTutor, tutorName, tutorLastName }, callback) {
+
+    connection.query({
+        sql: "SELECT * FROM preinscription WHERE parentCedula = ?",
+        values: [idTutor],
+        timeout: 40000
+    }, (error, results, fields) => {
+        if (error) {
+            console.log("Error al realizar la consulta del tutor".bgRed)
+        }
+        if (results.length) {
+            if (results[0].parentName != tutorName || results[0].parentLastName != tutorLastName) {
+                callback(false)
+            } else {
+                callback(true)
+            }
+
+        } else {
+            callback(true);
+        }
+    })
+
+}
+
+
+
 module.exports = {
     registerTeacher,
     validateUser,
@@ -235,5 +304,7 @@ module.exports = {
     registerMateriasAndTeacher,
     removeTeacher,
     getCargaNotas,
-    updateCargaNotas
+    updateCargaNotas,
+    registerStudent,
+    validTutor
 };

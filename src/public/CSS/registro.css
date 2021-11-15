@@ -162,6 +162,131 @@
  ::-moz-input-placeholder {
      color: rgba(255, 255, 255, 0.6);
  }
+ /*
+ dropbox
+ */
+ 
+ select {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     -ms-appearance: none;
+     appearance: none;
+     outline: 0;
+     box-shadow: none;
+     border: 1px solid rgba(255, 255, 255, 0.6);
+     background: transparent;
+     background-image: none;
+     flex: 1;
+     padding: 0 .5em;
+     color: rgba(255, 255, 255, 0.6);
+     cursor: pointer;
+     font-size: 16px;
+     font-family: 'Exo', Arial, Helvetica, sans-serif;
+ }
+ 
+ select::-ms-expand {
+     display: none;
+ }
+ 
+ #personal-data {
+     position: relative;
+ }
+ 
+ .select {
+     position: absolute;
+     display: flex;
+     width: 50%;
+     height: 30px;
+     line-height: 3;
+     background: transparent;
+     overflow: hidden;
+     border-radius: .25em;
+     margin-bottom: 10px;
+     top: 10px;
+     right: 30px;
+ }
+ 
+ .select::after {
+     content: '\25BC';
+     position: absolute;
+     top: 0;
+     right: 0;
+     padding: 0 1em;
+     background: transparent;
+     cursor: pointer;
+     pointer-events: none;
+     transition: .25s all ease;
+ }
+ 
+ .select:hover::after {
+     color: #23b499;
+ }
+ 
+ option {
+     background-color: rgb(11, 71, 11);
+ }
+ /*imagen del studiante*/
+ 
+ #image-student {
+     display: none;
+ }
+ 
+ #lgl-imageStudent {
+     border: 1px solid rgba(255, 255, 255, 0.6);
+     width: 100px;
+     height: 130px;
+     background: url("../IMG/userPlaceHolder.png") no-repeat center center;
+     background-size: cover;
+     text-align: center;
+     color: black;
+     line-height: 30px;
+     font-size: 15px;
+     text-shadow: 0px 0px 3px white;
+     word-wrap: break-word;
+     overflow: hidden;
+     margin-bottom: 20px;
+ }
+ /*******************************/
+ 
+ #gender-selector-container {
+     position: absolute;
+     right: 30px;
+     top: 50px;
+     width: 180px;
+     height: 70px;
+     border: 1px solid rgba(255, 255, 255, 0.6);
+     padding: 10px;
+     border-radius: 3px;
+ }
+ 
+ #radioButtons-container {
+     /* border: 1px solid black; */
+     position: relative;
+     width: 180px;
+     height: 70px;
+ }
+ 
+ .gender-option {
+     display: block;
+     margin-top: 10px;
+ }
+ 
+ .lbl-gender {
+     display: inline;
+     font-family: "Exo";
+     font-size: 16px;
+ }
+ 
+ #gender-masculine:checked~#lbl-masculine {
+     color: blue;
+     text-shadow: 0px 0px 3px white, 0px 0px 3px white, 0px 0px 3px white;
+ }
+ 
+ #gender-femenine:checked~#lbl-femenine {
+     color: rgb(224, 62, 89);
+     text-shadow: 0px 0px 3px white, 0px 0px 3px white, 0px 0px 3px white;
+ }
+ /********************************************/
  
  @media only screen and (max-width: 550px) {
      #logo {

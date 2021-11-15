@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="shortcut icon" href="IMG/SVG/BatallaLogo.svg" type="image/x-icon">
+
+    <!-- Sweet Alert -->
+    <script src="JS/sweetalert2/dist/sweetalert2.all.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/registro.css">
+
+    <!-- javascript -->
+    <script src="JS/preInscripcion.js" defer></script>
+</head>
+
+<body>
+    <div class="body"></div>
+    <div class="grad"></div>
+
+
+    <div id="form-container">
+        <form action="/registro" method="POST" enctype="multipart/form-data" id="formulario">
+            <div id="img-container">
+                <img src="IMG/SVG/BatallaLogo.svg" alt="" id="logo">
+
+            </div>
+            <div id="title-container">
+                <span id="titulo">Pre-inscripción de Estudiantes</span>
+            </div>
+            <div class="datacontainer" id="personal-data">
+
+
+                <label for="image-student" id="lgl-imageStudent">FOTO DEL ALUMNO</label>
+                <input type="file" value="" id="image-student">
+
+                <div class="select" id="select-anno">
+                    <select name="anno" id="anno">
+                                <option selected disabled value="off">Año escolar</option>
+                                <option value="1">Primer año</option>
+                                <option value="2">Segundo año</option>
+                                <option value="3">Tercer año</option>
+                                <option value="4">Cuarto año</option>
+                                <option value="5">Quinto año</option>
+                            </select>
+                </div>
+
+
+                <div id="gender-selector-container">
+                    <span id="gender-title">Genero del Estudiante</span>
+                    <div id="radioButtons-container">
+                        <div class="gender-option">
+                            <input type="radio" name="gender" class="radio-gender" value="M" id="gender-masculine" checked>&nbsp;<label for="gender-masculine" class="lbl-gender" id="lbl-masculine">Masculino</label>
+                        </div>
+                        <div class="gender-option">
+                            <input type="radio" name="gender" class="radio-gender" value="F" id="gender-femenine">&nbsp;<label for="gender-femenine" class="lbl-gender" id="lbl-femenine">Femenino</label>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <input type="text" id="studen-name" class="input-data" name="studenName" autocomplete="off" placeholder="Nombres del estudiante">
+
+                <input type="text" id="studen-last-name" class="input-data" name="studentLastName" autocomplete="off" placeholder="Apellidos del estudiante">
+
+                <input type="number" id="id-studen" class="input-data" name="idStuden" placeholder="Cedula del Estudiante">
+
+                <input type="text" id="tutor-name" class="input-data" name="tutorName" autocomplete="off" placeholder="Nombres del tutor">
+
+                <input type="text" id="tutor-last-name" class="input-data" name="tutorLastName" autocomplete="off" placeholder="Apellidos del tutor">
+
+                <input type="number" id="id-tutor" class="input-data" name="idTutor" placeholder="Cedula del tutor">
+
+            </div>
+            <div class="datacontainer" id="contact-data">
+
+                <input type="email" id="email" class="input-data" name="email" autocomplete="off" placeholder="E-mail">
+
+                <input type="number" id="phone" class="input-data" name="phone" autocomplete="off" placeholder="Telefono">
+                <input type="number" id="aux-phone" class="input-data" name="auxPhone" autocomplete="off" placeholder="Telefono alternativo">
+            </div>
+            <div class="datacontainer" id="login-data">
+
+
+                <input type="password" id="password" class="input-data" name="password" placeholder="Contraseña">
+
+                <input type="password" id="password2" class="input-data" placeholder="Repite la contraseña">
+
+            </div>
+
+            <button id="btn-atras">Regresar</button>
+            <button id="btn-register">Registrar</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

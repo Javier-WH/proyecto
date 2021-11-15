@@ -70,3 +70,25 @@ document.getElementById("password").addEventListener("keypress", e => {
         }
     }
 });
+
+document.getElementById("link-registro").addEventListener("click", e => {
+    e.preventDefault();
+
+    Swal.fire({
+        title: 'Inscripciones',
+        text: "Seleccione que desea inscribir",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3490DC',
+        cancelButtonColor: '#3490DC',
+        confirmButtonText: 'Inscribir Profesor  ',
+        cancelButtonText: 'Inscribir Estudiante'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.replace("/registro")
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            window.location.replace("/preInscripcion")
+        }
+    })
+
+})
